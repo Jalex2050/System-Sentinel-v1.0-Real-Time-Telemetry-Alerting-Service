@@ -32,7 +32,7 @@ except FileNotFoundError:
 
 # ================= FUNCTIONS =================
 def send_telegram_alert(message):
-    """Send alert to Telegram (if configured)"""
+    """Send alert to Telegram"""
     if not TOKEN or not CHAT_ID:
         return
 
@@ -48,7 +48,7 @@ def send_telegram_alert(message):
         print(f'[ERROR] Alert failed: {e}')
 
 def clear_console():
-    """Better screen clear (no flicker)"""
+    """Better screen clear"""
     print("\033c", end="")
 
 def log_to_csv(data):
