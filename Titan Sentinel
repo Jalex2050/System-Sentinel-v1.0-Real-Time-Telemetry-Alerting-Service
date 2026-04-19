@@ -1,5 +1,9 @@
 # 🛡️ Titan Sentinel
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ### Real-Time System Monitoring & Alert Engine
 
 Titan Sentinel is a lightweight, real-time system monitoring tool designed to track CPU, RAM, and Disk usage, generate performance reports, and trigger alerts based on configurable thresholds.
