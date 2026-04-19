@@ -4,117 +4,40 @@
 ![Status](https://img.shields.io/badge/status-active-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-### Real-Time System Monitoring & Alert Engine
+### Lightweight System Monitoring & Real-Time Alert Engine
 
-Titan Sentinel is a lightweight, real-time system monitoring tool designed to track CPU, RAM, and Disk usage, generate performance reports, and trigger alerts based on configurable thresholds.
+Titan Sentinel is a robust, headless system monitoring tool built in Python. It tracks critical hardware metrics—CPU, RAM, and Disk—generating real-time alerts and comprehensive post-mortem performance reports.
 
-Built with Python and designed to run in headless Linux environments, this project demonstrates practical system monitoring, logging, and alerting concepts commonly used in production environments.
+Designed for Linux environments and servers, it bridges the gap between simple scripts and complex monitoring suites.
 
-## Features
+## Key Features
 
-* Real-time monitoring of:
-  * CPU usage
-  * RAM usage
-  * Disk usage
-* Configurable alert thresholds
-* Telegram alert integration
-* Automatic performance report generation (PNG)
-* Logging system (CSV format)
-* Graceful shutdown with report generation
+* **Precise Monitoring:** High-resolution resource tracking using `psutil`.
+* **Smart Alerting:** Integrated Telegram notifications with configurable cooldowns to prevent spam.
+* **Data Persistence:** Real-time logging to CSV using context managers (no data loss on crashes).
+* **Visual Analytics:** Automatic generation of performance graphs (`system_report.png`) with threshold visualization upon shutdown.
+* **Production Ready:** Clean, English-based codebase with professional error handling.
 
-## Tech Stack
+## Setup & Installation
 
-* Python 3
-* psutil
-* matplotlib
-* requests
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/titan-sentinel.git](https://github.com/YOUR_USERNAME/titan-sentinel.git)
+    cd titan-sentinel
+    ```
 
-## Project Structure
+2.  **Install dependencies:**
+    ```bash
+    pip install psutil matplotlib requests
+    ```
 
-```
-titan-sentinel/
-│── sentinel.py
-│── system_log.csv        # generated
-│── system_report.png     # generated
-│── telegram_token.txt    # ignored
-│── telegram_id.txt       # ignored
-│── .gitignore
-```
-
-## ⚙️ Installation
-
-Clone the repository:
-
-git clone https://github.com/YOUR_USERNAME/titan-sentinel.git
-cd titan-sentinel
-
-Install dependencies:
-
-pip install psutil matplotlib requests
-
-
----
+3.  **Configure Alerts (Required for notifications):**
+    Create two text files in the root directory:
+    * `telegram_token.txt`: Paste your Telegram Bot API Token.
+    * `telegram_id.txt`: Paste your Telegram Chat ID.
 
 ## Usage
 
-Run the monitor:
-
-```
+Run the engine:
+```bash
 python sentinel.py
-```
-
-Stop execution safely:
-
-```
-Ctrl + C
-```
-
-Upon shutdown, the system will automatically:
-
-* Generate a performance graph
-* Save logs to CSV
-
----
-
-## Output
-
-* `system_report.png` → Visual performance graph
-* `system_log.csv` → Raw metrics data
-
----
-
-## Alerts (Optional)
-
-Configure:
-
-* `telegram_token.txt`
-* `telegram_id.txt`
-
-The system will send alerts when thresholds are exceeded.
-
-## Design Philosophy
-
-This project focuses on:
-
-* Simplicity over complexity
-* Real-world applicability
-* Headless system compatibility
-* Observability fundamentals
-
-## Future Improvements
-
-* Web dashboard (Flask / FastAPI)
-* Live visualization
-* Automated remediation (self-healing actions)
-* Intelligent anomaly detection
-
-## 👨‍💻 Author
-
-Jalex
-Aspiring systems engineer focused on real-world tooling and automation.
-
----
-
-##License
-
-MIT License
