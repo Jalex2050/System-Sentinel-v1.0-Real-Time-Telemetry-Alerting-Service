@@ -1,0 +1,116 @@
+# 🛡️ Titan Sentinel
+
+### Real-Time System Monitoring & Alert Engine
+
+Titan Sentinel is a lightweight, real-time system monitoring tool designed to track CPU, RAM, and Disk usage, generate performance reports, and trigger alerts based on configurable thresholds.
+
+Built with Python and designed to run in headless Linux environments, this project demonstrates practical system monitoring, logging, and alerting concepts commonly used in production environments.
+
+## Features
+
+* Real-time monitoring of:
+  * CPU usage
+  * RAM usage
+  * Disk usage
+* Configurable alert thresholds
+* Telegram alert integration
+* Automatic performance report generation (PNG)
+* Logging system (CSV format)
+* Graceful shutdown with report generation
+
+## Tech Stack
+
+* Python 3
+* psutil
+* matplotlib
+* requests
+
+## Project Structure
+
+```
+titan-sentinel/
+│── sentinel.py
+│── system_log.csv        # generated
+│── system_report.png     # generated
+│── telegram_token.txt    # ignored
+│── telegram_id.txt       # ignored
+│── .gitignore
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+git clone https://github.com/YOUR_USERNAME/titan-sentinel.git
+cd titan-sentinel
+
+Install dependencies:
+
+pip install psutil matplotlib requests
+
+
+---
+
+## Usage
+
+Run the monitor:
+
+```
+python sentinel.py
+```
+
+Stop execution safely:
+
+```
+Ctrl + C
+```
+
+Upon shutdown, the system will automatically:
+
+* Generate a performance graph
+* Save logs to CSV
+
+---
+
+## Output
+
+* `system_report.png` → Visual performance graph
+* `system_log.csv` → Raw metrics data
+
+---
+
+## Alerts (Optional)
+
+Configure:
+
+* `telegram_token.txt`
+* `telegram_id.txt`
+
+The system will send alerts when thresholds are exceeded.
+
+## Design Philosophy
+
+This project focuses on:
+
+* Simplicity over complexity
+* Real-world applicability
+* Headless system compatibility
+* Observability fundamentals
+
+## Future Improvements
+
+* Web dashboard (Flask / FastAPI)
+* Live visualization
+* Automated remediation (self-healing actions)
+* Intelligent anomaly detection
+
+## 👨‍💻 Author
+
+Jalex
+Aspiring systems engineer focused on real-world tooling and automation.
+
+---
+
+##License
+
+MIT License

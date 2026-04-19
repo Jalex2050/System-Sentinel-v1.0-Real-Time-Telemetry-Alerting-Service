@@ -1,2 +1,0 @@
-# System-Sentinel-v1.0-Real-Time-Telemetry-Alerting-Service
-A low-level monitoring solution developed in Python for the AMD Ryzen 5000 architecture. The system captures critical hardware metrics (CPU, RAM, Disk I/O), manages historical logs in CSV format, and leverages the Telegram API for proactive system health notifications, enabling rapid remote diagnostics through top-process consumption analysis.
